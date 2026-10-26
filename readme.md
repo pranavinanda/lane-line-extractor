@@ -96,23 +96,23 @@ The generated images can be viewed in the respective folders inside `outputs`.
 
 **Color Mask**
 
-![Color Mask](outputs/image1/2_white_mask.jpg)
+![Color Mask](2_white_mask.jpg)
 
 **Gaussian Blur**
 
-![Gaussian Blur](outputs/image1/3_blurred.jpg)
+![Gaussian Blur](3_blurred.jpg)
 
 **Canny Edge Detection**
 
-![Canny Edges](outputs/image1/4_edges.jpg)
+![Canny Edges](4_edges.jpg)
 
 **ROI Mask**
 
-![ROI Mask](outputs/image1/5_roi_mask.jpg)
+![ROI Mask](5_roi_mask.jpg)
 
 **Final Lane Extraction**
 
-![Final Lane Extraction](outputs/image1/6_final_lanes.jpg)
+![Final Lane Extraction](6_final_lanes.jpg)
 
 ## 8. Conclusion
 
