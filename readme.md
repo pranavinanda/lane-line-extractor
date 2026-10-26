@@ -92,7 +92,7 @@ The generated images can be viewed in the respective folders inside `outputs`.
 
 **Original Image**
 
-![Original Image](outputs/image1/1_original.jpg)
+![Original Image](1_original.jpg)
 
 **Color Mask**
 
