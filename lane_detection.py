@@ -101,4 +101,4 @@ for name in names:
         show_and_save("6. ROI Masked Edges",final_lanes,output_folder + "/6_final_lanes.jpg")
 
     print("\nAll images processed!")
-    print("Check the outputs folder.") explain this code in so much detail that i know the sytnax for each cv2function used, whay what is being used of done, what chnages each line in doing, what is the prupose of each function, how everything is executnig and what chmages are being refelcted and outputs after each funtipn]
+    print("Check the outputs folder.")
