@@ -21,24 +21,20 @@ The project processes road images through the following steps:
 
 ## Project Structure
 
-```text
 lane-line-extractor/
 ├── images/
 │   ├── image1.jpg
 │   ├── image2.jpg
 │   ├── image3.jpeg
 │   └── image4.jpg
-├── screenshots/
-│   ├── original.jpg
-│   ├── color_mask.jpg
-│   ├── blurred.jpg
-│   ├── edges.jpg
-│   └── final_lanes.jpg
+├── outputs
+│   ├── image1
+│   ├── image2
+│   ├── image3
+│   ├── image4
 ├── lane_detection.py
-└── README.md
-```
+└── readme.md
 
-*The filenames above are examples. Update them to match the files you upload.*
 
 ## Requirements
 
