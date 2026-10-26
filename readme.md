@@ -1,79 +1,119 @@
-# Classical Computer Vision: Lane Line Extractor
+# Lane Line Extractor Using Classical Computer Vision
 
-## Overview
-This project uses classical computer vision techniques with OpenCV to identify lane markings in static road images. It focuses on detecting white and yellow lane lines and reducing irrelevant parts of the image.
+## 1. Overview
 
-## Technologies Used
+This project implements a lane line extraction system using classical computer vision techniques with OpenCV. It processes static road images to identify potential lane markings by filtering white and yellow colors, detecting edges, and focusing on the road region.
+
+## 2. Technologies Used
+
 - Python
 - OpenCV
 - NumPy
 
-## Image Processing Pipeline
-The project processes road images through the following steps:
+## 3. Project Structure
 
-1. **Load Image:** Reads the input road image using OpenCV.
-2. **HSV Color Filtering:** Converts the image from BGR to HSV color space and creates masks to identify white and yellow pixels.
-3. **Grayscale Conversion:** Converts the filtered image to grayscale.
-4. **Gaussian Blur:** Reduces noise and small details in the image.
-5. **Canny Edge Detection:** Detects edges in the blurred image.
-6. **Region of Interest (ROI):** Creates a polygon mask to focus on the road area.
-7. **Final Lane Extraction:** Applies the ROI mask to the detected edges.
-
-## Project Structure
-
-lane-line-extractor/
+```text
+LaneLineExtractor/
 ├── images/
 │   ├── image1.jpg
 │   ├── image2.jpg
 │   ├── image3.jpeg
 │   └── image4.jpg
-├── outputs
-│   ├── image1
-│   ├── image2
-│   ├── image3
-│   ├── image4
+├── outputs/
+│   ├── image1/
+│   ├── image2/
+│   ├── image3/
+│   └── image4/
 ├── lane_detection.py
 └── readme.md
+```
 
+## 4. Image Processing Steps
 
-## Requirements
+### Step 1: Load Image
+The input road images are loaded using `cv2.imread()`.
 
-Install Python, then install the required libraries:
+### Step 2: HSV Color Filtering
+The image is converted from BGR to HSV color space. Color masks are created to identify white and yellow lane markings. The masks are combined to filter out unwanted colors.
+
+### Step 3: Grayscale Conversion
+The filtered image is converted into grayscale to simplify further image processing.
+
+### Step 4: Gaussian Blur
+Gaussian blur is applied to reduce noise and small details before edge detection.
+
+### Step 5: Canny Edge Detection
+The Canny edge detector identifies edges in the blurred image that may correspond to lane markings.
+
+### Step 6: Region of Interest (ROI)
+A polygon-shaped mask is created to focus on the road region and ignore edges outside the selected area.
+
+### Step 7: Final Lane Extraction
+The ROI mask is applied to the Canny edge image to retain the detected edges within the region of interest.
+
+## 5. Requirements
+
+Install Python and the required libraries:
 
 ```bash
 pip install opencv-python numpy
 ```
 
-## How to Run
+## 6. How to Run
 
 1. Clone or download this repository.
-2. Make sure the input road images are inside the `images` folder.
-3. Open a terminal in the project folder.
-4. Run:
+2. Ensure the road images are placed inside the `images` folder.
+3. Open a terminal in the project directory.
+4. Run the Python script:
 
 ```bash
 python lane_detection.py
 ```
 
-The script processes the images listed in the Python file and displays the processing stages. Output images are saved when the output paths and folders are available.
+The program processes the images listed in the script, displays the processing stages, and saves the generated output images in the corresponding folders inside `outputs`.
 
-## Results
+Ensure the output folders exist before running the program.
 
-### Original Road Image
-![Original Road Image](screenshots/original.jpg)
+## 7. Results
 
-### White and Yellow Color Mask
-![Color Mask](screenshots/color_mask.jpg)
+The program generates the following processing outputs for the input road images:
 
-### Gaussian Blur
-![Gaussian Blur](screenshots/blurred.jpg)
+- Original road image
+- White and yellow color mask
+- Gaussian-blurred image
+- Canny edge image
+- Region of Interest mask
+- Final ROI-masked edge image
 
-### Canny Edge Detection
-![Canny Edges](screenshots/edges.jpg)
+The generated images can be viewed in the respective folders inside `outputs`.
 
-### Final ROI-Masked Edges
-![Final Lane Extraction](screenshots/final_lanes.jpg)
+### Output Screenshots
 
-## Conclusion
 
-This project demonstrates how classical computer vision techniques can be combined to isolate potential lane markings in road images. The results depend on image quality, lighting conditions, color thresholds, and the selected region of interest.
+**Original Image**
+
+![Original Image](outputs/image1/1_original.jpg)
+
+**Color Mask**
+
+![Color Mask](outputs/image1/2_white_mask.jpg)
+
+**Gaussian Blur**
+
+![Gaussian Blur](outputs/image1/3_blurred.jpg)
+
+**Canny Edge Detection**
+
+![Canny Edges](outputs/image1/4_edges.jpg)
+
+**ROI Mask**
+
+![ROI Mask](outputs/image1/5_roi_mask.jpg)
+
+**Final Lane Extraction**
+
+![Final Lane Extraction](outputs/image1/6_final_lanes.jpg)
+
+## 8. Conclusion
+
+This project demonstrates the use of classical computer vision techniques for lane line extraction from static road images. HSV color filtering, Gaussian blur, Canny edge detection, and Region of Interest masking are combined to identify potential lane markings. The results may vary depending on lighting conditions, image quality, color thresholds, and ROI selection.
